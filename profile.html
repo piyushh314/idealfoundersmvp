@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Your Profile | Idealfounders</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-50 min-h-screen flex items-center justify-center">
+
+<div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl p-8">
+
+  <!-- Progress Bar -->
+  <div class="mb-8">
+    <div class="w-full bg-blue-100 rounded-full h-2">
+      <div id="progressBar" class="bg-blue-600 h-2 rounded-full w-0 transition-all duration-500"></div>
+    </div>
+    <p class="text-gray-700 text-sm mt-2" id="stepLabel">Step 1 of 3</p>
+  </div>
+
+  <!-- Steps Container -->
+  <form id="profileForm" class="space-y-6">
+
+    <!-- Step 1: Account Creation -->
+    <div class="step" id="step1">
+      <h2 class="text-xl font-bold text-blue-800 mb-4">Create Your Account</h2>
+      <p class="text-gray-500 mb-4">Enter your details to sign up</p>
+
+      <input type="text" placeholder="Full Name" id="fullName" class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-3 focus:ring-2 focus:ring-blue-600">
+      <input type="email" placeholder="Email" id="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-3 focus:ring-2 focus:ring-blue-600">
+      <input type="password" placeholder="Password" id="password" class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-3 focus:ring-2 focus:ring-blue-600">
+
+      <button type="button" id="googleSignUp" class="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 mb-3">Sign up with Google</button>
+
+      <div class="flex justify-between">
+        <a href="index.html" type="button" disabled class="bg-gray-300 text-gray-600 px-6 py-2 rounded-lg cursor-pointer">Back</a>
+        <button type="button" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700" onclick="nextStep()">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Roles -->
+    <div class="step hidden" id="step2">
+      <h2 class="text-xl font-bold text-blue-800 mb-4">Complete Your Profile</h2>
+      <p class="text-gray-500 mb-4">Select all that apply</p>
+
+      <div class="grid grid-cols-2 gap-3 mb-4">
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="Founder">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">Founder</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="Developer">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">Developer</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="Marketer">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">Marketer</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="Designer">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">Designer</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="Investor">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">Investor</span>
+        </label>
+      </div>
+
+      <div class="flex justify-between">
+        <button type="button" class="bg-gray-300 text-gray-600 px-6 py-2 rounded-lg hover:bg-gray-400" onclick="prevStep()">Back</button>
+        <button type="button" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700" onclick="nextStep()">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Passions & Journey -->
+    <div class="step hidden" id="step3">
+      <h2 class="text-xl font-bold text-blue-800 mb-4">Complete Your Profile</h2>
+      <p class="text-gray-500 mb-4">What are you passionate about?</p>
+
+      <div class="grid grid-cols-2 gap-3 mb-4">
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="AI">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">AI</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="SaaS">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">SaaS</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="Marketing">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">Marketing</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="Blockchain">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">Blockchain</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="Mobile">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">Mobile</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="E-commerce">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">E-commerce</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="Fintech">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">Fintech</span>
+        </label>
+        <label class="border border-gray-300 rounded-lg px-4 py-2 cursor-pointer hover:border-blue-600 transition flex items-center">
+          <input type="checkbox" class="peer hidden" value="EdTech">
+          <span class="peer-checked:text-white peer-checked:bg-blue-600 px-2 py-1 rounded">EdTech</span>
+        </label>
+      </div>
+
+      <p class="text-gray-500 mb-2">Where are you in your journey?</p>
+      <select id="journey" class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-4 focus:ring-2 focus:ring-blue-600">
+        <option>Idea</option>
+        <option>Early</option>
+        <option>Scaling</option>
+      </select>
+
+      <p class="text-gray-500 mb-2">How do you want to work?</p>
+      <select id="workType" class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-4 focus:ring-2 focus:ring-blue-600">
+        <option>Local</option>
+        <option>Remote</option>
+        <option>Both</option>
+      </select>
+
+      <div class="flex justify-between">
+        <button type="button" class="bg-gray-300 text-gray-600 px-6 py-2 rounded-lg hover:bg-gray-400" onclick="prevStep()">Back</button>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Finish Setup</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<!-- JS for Step Navigation & Validation -->
+<script>
+let currentStep = 1;
+const totalSteps = 3;
+
+function updateProgress() {
+  const progress = (currentStep / totalSteps) * 100;
+  document.getElementById('progressBar').style.width = progress + '%';
+  document.getElementById('stepLabel').innerText = `Step ${currentStep} of ${totalSteps}`;
+}
+
+function showStep(step) {
+  document.querySelectorAll('.step').forEach(el => el.classList.add('hidden'));
+  document.getElementById('step' + step).classList.remove('hidden');
+  updateProgress();
+}
+
+function validateStep(step) {
+  if(step === 1) {
+    const name = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const pass = document.getElementById("password").value;
+    if(!name || !email || !pass) { alert("Fill all account fields"); return false; }
+  }
+  if(step === 2) {
+    if(document.querySelectorAll('#step2 input[type="checkbox"]:checked').length === 0) {
+      alert("Select at least one role"); return false;
+    }
+  }
+  if(step === 3) {
+    if(document.querySelectorAll('#step3 input[type="checkbox"]:checked').length === 0) {
+      alert("Select at least one passion"); return false;
+    }
+  }
+  return true;
+}
+
+function nextStep() {
+  if(validateStep(currentStep)) {
+    if(currentStep < totalSteps) currentStep++;
+    showStep(currentStep);
+  }
+}
+
+function prevStep() {
+  if(currentStep > 1) currentStep--;
+  showStep(currentStep);
+}
+
+showStep(currentStep);
+</script>
+
+<script type="module" src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Idealfounders</title>
+  <link rel="icon" type="image/png" href="ifbluelogo.png">
+</head>
+<body class="bg-gray-100">
+
+ <!-- Header -->
+  <header class="text-gray-700 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <!-- Logo replaced here -->
+        <img src="ifbluelogo.png" alt="Idealfounders Logo" class="w-10 h-10 rounded-full bg-white p-1">
+        <span class="ml-3 text-xl">Idealfounders</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a href="index.html" class="mr-5 hover:text-blue-800">Home</a>
+        <a href="myprofile.html" class="mr-5 hover:text-blue-800 text-blue-600" >My Profile</a>
+        <a href="about.html" class="mr-5 hover:text-blue-800">About</a>
+      </nav>
+        <a href="login.html" class="inline-flex items-center bg-blue-100 border-0 py-1 px-3 focus:outline-none hover:bg-blue-200 rounded text-base mt-4 md:mt-0 text-blue-800">
+          Login
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+    </div>
+  </header>
+  
+  <!-- Main Layout -->
+  <div class="container mx-auto mt-6 grid grid-cols-12 gap-6">
+
+    <!-- Left Sidebar -->
+    <aside class="col-span-12 md:col-span-3 bg-white rounded-lg shadow p-4 space-y-4">
+      <div class="flex flex-col items-center">
+        <img src="images/personpfp.png" class="w-20 h-20 rounded-full" alt="Profile photo">
+        <h2 class="text-xl font-semibold mt-2">Piyush Yadav</h2>
+        <p class="text-gray-500">Founder | Developer</p>
+      </div>
+      <div class="border-t border-gray-200 pt-4">
+        <h3 class="font-semibold text-gray-700 mb-2">Stats</h3>
+        <ul class="space-y-1 text-gray-600">
+          <li>Connections: 150</li>
+          <li>Posts: 12</li>
+          <li>Messages: 5</li>
+        </ul>
+      </div>
+      <div class="border-t border-gray-200 pt-4">
+        <h3 class="font-semibold text-gray-700 mb-2">Suggested Connections</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center justify-between">
+            <span>person1</span>
+            <button class="text-sm bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-700">Connect</button>
+          </li>
+          <li class="flex items-center justify-between">
+            <span>person2</span>
+            <button class="text-sm bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-700">Connect</button>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Feed Section -->
+    <main class="col-span-12 md:col-span-6 space-y-6">
+      <!-- Hero / Call-to-action -->
+      <div class="bg-blue-600 text-white rounded-lg p-6 flex flex-col items-center">
+        <h1 class="text-3xl font-bold mb-2">Find your perfect co-founder</h1>
+        <p class="mb-4">Meet builders, creators, and visionaries to build your next big startup.</p>
+        <a href="profile.html" class="bg-white text-blue-600 font-semibold px-6 py-2 rounded hover:bg-gray-100 transition">Complete Your Profile</a>
+      </div>
+
+      <!-- Feed posts -->
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg shadow p-4">
+          <div class="flex items-center space-x-3 mb-2">
+            <img src="images/personpfp.png" class="w-10 h-10 rounded-full" alt="User">
+            <div>
+              <h3 class="font-semibold text-gray-800">Pushkar</h3>
+              <p class="text-gray-500 text-sm">Founder | 2h ago</p>
+            </div>
+          </div>
+          <p>Excited to start my new SaaS project! Looking for co-founders interested in Tech.</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+          <div class="flex items-center space-x-3 mb-2">
+            <img src="images/personpfp.png" class="w-10 h-10 rounded-full" alt="User">
+            <div>
+              <h3 class="font-semibold text-gray-800">Harsh raj</h3>
+              <p class="text-gray-500 text-sm">Marketer | 5h ago</p>
+            </div>
+          </div>
+          <p>Just finished building an agency. Looking for investors!</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Sidebar (Chat) -->
+    <aside class="col-span-12 md:col-span-3 bg-white rounded-lg shadow p-4 space-y-4">
+      <h3 class="font-semibold text-gray-700 mb-2">Messages</h3>
+      <div class="space-y-2 max-h-[500px] overflow-y-auto">
+        <div class="flex items-center space-x-3 hover:bg-gray-100 p-2 rounded cursor-pointer">
+          <img src="images/personpfp.png" class="w-10 h-10 rounded-full" alt="User">
+          <div>
+            <h4 class="font-semibold text-gray-800">person1</h4>
+            <p class="text-gray-500 text-sm truncate w-40">Hey, interested in your project!</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3 hover:bg-gray-100 p-2 rounded cursor-pointer">
+          <img src="images/personpfp.png" class="w-10 h-10 rounded-full" alt="User">
+          <div>
+            <h4 class="font-semibold text-gray-800">person2</h4>
+            <p class="text-gray-500 text-sm truncate w-40">Can we collaborate?</p>
+          </div>
+        </div>
+      </div>
+      <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">New Message</button>
+    </aside>
+
+  </div>
+
+   <!-- Footer -->
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <!-- Logo replaced here -->
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="ifbluelogo.png" alt="Idealfounders Logo" class="w-10 h-10 rounded-full bg-white p-1">
+        <span class="ml-3 text-xl">Idealfounders</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        © 2025 Idealfounders
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500"><svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+        <a class="ml-3 text-gray-500"><svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg></a>
+      </span>
+    </div>
+  </footer>
+
+
+</body>
+</html>
