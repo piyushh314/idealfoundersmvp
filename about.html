@@ -9,50 +9,58 @@
 </head>
 <body class="bg-gray-100">
 
-  <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm">
-    <div class="max-w-7xl mx-auto flex justify-between items-center p-4 px-6">
-      <a href="index.html" class="flex items-center space-x-2">
-        <img src="ifbluelogo.png" alt="Idealfounders Logo" class="w-10 h-10 rounded-full bg-white p-1" />
-        <span class="text-xl md:text-2xl font-bold text-blue-800">Idealfounders</span>
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-gray-50 shadow-md">
+  <div class="container mx-auto flex justify-between items-center p-4">
+
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="ifbluelogo.png" alt="Idealfounders Logo" class="w-10 h-10 rounded-full bg-white p-1">
+      <span class="text-xl font-semibold text-blue-800">Idealfounders</span>
+    </a>
+
+    <!-- Hamburger button (only on mobile) -->
+    <button id="menu-btn" class="md:hidden text-blue-800 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 text-gray-700 items-center">
+      <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+      <a href="underconstruction.html" class="hover:text-blue-600 transition">My Profile</a>
+      <a href="about.html" class="hover:text-blue-600 transition">About</a>
+      <a href="login.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        Login
       </a>
+    </nav>
+  </div>
 
-      <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-blue-800 focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200">
+    <nav class="flex flex-col space-y-3 p-4 text-gray-700">
+      <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+      <a href="underconstruction.html" class="hover:text-blue-600 transition">My Profile</a>
+      <a href="about.html" class="hover:text-blue-600 transition">About</a>
+      <a href="login.html" class="bg-blue-600 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition">
+        Login
+      </a>
+    </nav>
+  </div>
+</header>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex space-x-6 items-center text-gray-700">
-        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-        <a href="myprofile.html" class="hover:text-blue-600 transition">My Profile</a>
-        <a href="about.html" class="hover:text-blue-600 transition">About</a>
-        <a href="login.html" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow">
-          Login
-        </a>
-      </nav>
-    </div>
+<!-- Toggle Script -->
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-    <!-- Mobile Nav -->
-    <div id="mobile-menu" class="hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
-      <nav class="flex flex-col space-y-3 p-4 text-gray-700">
-        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-        <a href="myprofile.html" class="hover:text-blue-600 transition">My Profile</a>
-        <a href="about.html" class="hover:text-blue-600 transition">About</a>
-        <a href="login.html" class="bg-blue-600 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition">
-          Login
-        </a>
-      </nav>
-    </div>
-    <script>
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
-    </script>
-  </header>
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
 
   <!-- About Section -->
   <section class="container mx-auto py-16 px-4 text-center">
@@ -62,45 +70,39 @@
       We’re on a mission to bring visionaries, builders, and creators together to form powerful founding teams —  
       where ideas meet execution, and ambition meets partnership.
     </p>
+<!-- Team Section -->
+<div class="grid md:grid-cols-3 gap-10 mt-10">
 
-    <!-- Team Section -->
-    <div class="grid md:grid-cols-3 gap-10 mt-10">
+  <!-- Pushkar -->
+  <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition order-2 md:order-1">
+    <img src="images/pushkar.jpeg" alt="Pushkar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-600">
+    <h2 class="text-2xl font-semibold text-gray-800">Pushkar</h2>
+    <p class="text-blue-600 font-medium mb-2">Finance Head & Strategist</p>
+    <p class="text-gray-600 mb-3">Co-founder | BMS (1st Year)</p>
+    <p class="text-gray-500 text-sm">The financial brain and strategist, turning bold ideas into sustainable business models.</p>
+    <p class="text-gray-400 text-sm mt-2">Shaheed Sukhdev College of Business Studies, DU</p>
+  </div>
 
-      <!-- Pushkar -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
-        <img src="pushkar.jpeg" alt="Pushkar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-600">
-        <h2 class="text-2xl font-semibold text-gray-800">Pushkar</h2>
-        <p class="text-blue-600 font-medium mb-2">Finance Head & Strategist</p>
-        <p class="text-gray-600 mb-3">Co-founder | BMS (1st Year)</p>
-        <p class="text-gray-500 text-sm">The financial brain and strategist, turning bold ideas into sustainable business models.</p>
-        <p class="text-gray-400 text-sm mt-2">Shaheed Sukhdev College of Business Studies, DU</p>
-      </div>
+  <!-- Piyush -->
+  <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition order-1 md:order-2">
+    <img src="images/piyushpfp.jpeg" alt="Piyush Yadav" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-600">
+    <h2 class="text-2xl font-semibold text-gray-800">Piyush Yadav</h2>
+    <p class="text-blue-600 font-medium mb-2">Tech Heart & Innovator</p>
+    <p class="text-gray-600 mb-3">Co-founder | BMS (1st Year)</p>
+    <p class="text-gray-500 text-sm">The tech mind behind Idealfounders, driving innovation and building the digital future.</p>
+    <p class="text-gray-400 text-sm mt-2">Shaheed Sukhdev College of Business Studies, DU</p>
+  </div>
 
-      <!-- Piyush -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
-        <img src="piyushpfp.jpeg" alt="Piyush Yadav" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-600">
-        <h2 class="text-2xl font-semibold text-gray-800">Piyush Yadav</h2>
-        <p class="text-blue-600 font-medium mb-2">Tech Heart  & Innovator</p>
-        <p class="text-gray-600 mb-3">Co-founder | BMS (1st Year)</p>
-        <p class="text-gray-500 text-sm">The tech mind behind Idealfounders, driving innovation and building the digital future.</p>
-        <p class="text-gray-400 text-sm mt-2">Shaheed Sukhdev College of Business Studies, DU</p>
-      </div>
-
-      
-
-      <!-- Harsh Raj -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
-        <img src="harshraj.jpeg" alt="Harsh Raj" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-600">
-        <h2 class="text-2xl font-semibold text-gray-800">Harsh Raj</h2>
-        <p class="text-blue-600 font-medium mb-2">Marketing Head & Idea Generator</p>
-        <p class="text-gray-600 mb-3">Co-founder | BMS (1st Year)</p>
-        <p class="text-gray-500 text-sm">The creative spark and marketing mind, turning fresh ideas into impactful brand stories that connect and inspire.</p>
-
-        <p class="text-gray-400 text-sm mt-2">Shaheed Sukhdev College of Business Studies, DU</p>
-
-        </div>
-    </div>
-  </section>
+  <!-- Harsh Raj -->
+  <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition order-3 md:order-3">
+    <img src="images/harshraj.jpeg" alt="Harsh Raj" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-600">
+    <h2 class="text-2xl font-semibold text-gray-800">Harsh Raj</h2>
+    <p class="text-blue-600 font-medium mb-2">Marketing Head & Idea Generator</p>
+    <p class="text-gray-600 mb-3">Co-founder | BMS (1st Year)</p>
+    <p class="text-gray-500 text-sm">The creative spark and marketing mind, turning fresh ideas into impactful brand stories that connect and inspire.</p>
+    <p class="text-gray-400 text-sm mt-2">Shaheed Sukhdev College of Business Studies, DU</p>
+  </div>
+</div>
 
    <!-- Footer -->
   <footer class="text-gray-600 body-font">
@@ -121,6 +123,4 @@
   </footer>
 
 </body>
-
 </html>
-
